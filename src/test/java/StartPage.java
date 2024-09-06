@@ -3,14 +3,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 public class StartPage extends BaseTest {
     protected WebDriver driver;
-
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(14));
 
     public StartPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -83,15 +80,4 @@ public class StartPage extends BaseTest {
         fieldEmail.sendKeys(email);
         buttonContinue.click();
     }
-
-//    @FindBy(xpath = "//input[@type=\"password\"]")
-//    private WebElement enterPassword;
-
-//    @Step("Ввести Email")
-//    public void enterFieldPassword(String password) {
-//        enterEmail.click();
-//        enterEmail.sendKeys(password);
-//    }
-
-
 }
